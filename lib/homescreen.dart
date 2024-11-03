@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moneyglitch/expense.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -42,9 +43,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     visible: _isExpanded,
                     child: FloatingActionButton(
                       onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Option 1 selected')),
-                        );
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) {
+                                    return const ExpenseScreen();
+                                  },
+                              ),
+                          );
                       },
                       backgroundColor: Colors.green[700],
                       mini: false,
