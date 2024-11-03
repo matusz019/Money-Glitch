@@ -12,17 +12,18 @@ class HomeScreen extends StatelessWidget {
         foregroundColor: Colors.white,
         backgroundColor: Colors.green[700],
       ),
-      floatingActionButton: ElevatedButton(
-          onPressed: () {},
-          style: ElevatedButton.styleFrom(
-            shape: const CircleBorder(),
-            padding: const EdgeInsets.all(20),
-            backgroundColor: Colors.green[700],
-            foregroundColor: Colors.white,
-          ),
-          child: const Icon(Icons.menu, color: Colors.white),
+      body: Center(
+        child: PopupMenuButton(
+          surfaceTintColor: Colors.white,
+          color: Colors.green[700],
+          icon: const Icon(Icons.menu, color: Colors.black),
+          itemBuilder: (BuildContext context) {
+            return[
 
+            ];
+          },
 
+        ),
       ),
     );
   }
