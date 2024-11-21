@@ -42,7 +42,7 @@ class _IncomeScreenState extends State<IncomeScreen> {
               keyboardType: TextInputType.number, // Numeric keyboard
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: "Income Amount",
+                labelText: "Income Amount £",
               ),
             ),
             const SizedBox(height: 16), // Space before the dropdown
