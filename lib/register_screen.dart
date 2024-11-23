@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:moneyglitch/register_screen.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +32,19 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 40),
               TextField(
                 decoration: InputDecoration(
+                  hintText: 'Username',
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide.none,
+                  ),
+                  prefixIcon: const Icon(Icons.person, color: Colors.green),
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                decoration: InputDecoration(
                   hintText: 'Email',
                   filled: true,
                   fillColor: Colors.white,
@@ -56,11 +68,24 @@ class LoginPage extends StatelessWidget {
                   ),
                   prefixIcon: const Icon(Icons.lock, color: Colors.green),
                 ),
+              ),const SizedBox(height: 16),
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: 'Confirm Password',
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide.none,
+                  ),
+                  prefixIcon: const Icon(Icons.lock, color: Colors.green),
+                ),
               ),
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  // Handle login action
+                  // Handle register action
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green.shade500,
@@ -70,7 +95,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  'Login',
+                  'Register',
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.black87,
@@ -78,24 +103,6 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return const RegisterScreen();
-                      },
-                    ),
-                  );
-                },
-                child: Text(
-                  'Don’t have an account? Sign Up',
-                  style: TextStyle(
-                    color: Colors.green.shade100,
-                  ),
-                ),
-              ),
             ],
           ),
         ),
